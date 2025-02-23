@@ -60,14 +60,22 @@ body {
 }
 
 .icon {
-    font-size: 20px;
+    width: 24px;  /* Adjust to 32px if needed */
+    height: 24px;
+    object-fit: contain; /* Ensures the image scales correctly */
     margin-right: 10px;
 }
 
 .dropdown {
-    margin-left: auto;
-    font-size: 14px;
+    width: 24px;  /* Adjust to 32px if needed */
+    height: 24px;
+    object-fit: contain; /* Ensures the image scales correctly */
+    margin-left: auto; /* Pushes dropdown to the right */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 /* Main Content */
 .main-content {
@@ -131,6 +139,18 @@ body {
     border-radius: 50%;
     margin-right: 10px;
 }
+
+.dropdown-menu {
+    list-style: none;
+    margin-left: 30px;
+    display: none;
+    padding-left: 20px;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
 
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 1024px) {
