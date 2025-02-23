@@ -11,3 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+    // Mobile sidebar toggle
+    const sidebar = document.querySelector(".sidebar");
+    const menuToggle = document.createElement("button");
+    menuToggle.innerText = "☰";
+    menuToggle.classList.add("menu-toggle");
+    document.body.insertBefore(menuToggle, document.body.firstChild);
+    
+    menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+    });
