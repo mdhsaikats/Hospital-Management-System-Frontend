@@ -23,12 +23,50 @@ body {
 
 /* Sidebar */
 .sidebar {
-    border-radius: 20px;
-    margin: 30px;
     width: 250px;
+    margin-top: 20px;
+    height: 96vh;
+    margin-left: 20px;
     background-color: #4E8077;
     padding: 20px;
+    border-radius: 20px;
     transition: all 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+/* Navigation */
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-bottom: 10px;
+}
+
+.nav-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.dropdown {
+    margin-left: auto;
+    font-size: 14px;
 }
 
 /* Main Content */
@@ -41,8 +79,6 @@ body {
 
 /* Header */
 .header {
-    margin-top: 10px;
-    margin-left: -20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
