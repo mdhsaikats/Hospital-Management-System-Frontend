@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+});
 
     // Mobile sidebar toggle
     const sidebar = document.querySelector(".sidebar");
@@ -22,6 +23,3 @@ document.addEventListener("DOMContentLoaded", function () {
     menuToggle.addEventListener("click", function () {
         sidebar.classList.toggle("active");
     });
-
-
-    
