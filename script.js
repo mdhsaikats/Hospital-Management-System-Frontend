@@ -24,7 +24,26 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.classList.toggle("active");
     });
 
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('.sidebar').classList.toggle('active');
+ // Wait for the DOM to load completely
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the profile container and dropdown
+    const profile = document.querySelector('.profile');
+    const dropdown = document.querySelector('.profiledown');
+    const closeButton = document.querySelector('.close-btn');
+
+    // Toggle 'show' class when profile is clicked
+    profile.addEventListener('click', function() {
+        dropdown.classList.toggle('show');
     });
+
+    // Close the dropdown when the close button is clicked
+    closeButton.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent closing when clicking the close button
+        dropdown.classList.remove('show'); // Close the dropdown
+    });
+});
+
+
+    
+    
     
