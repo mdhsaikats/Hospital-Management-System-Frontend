@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devic-md.e-width, initial-scale=1.0">
+    <title>HMS</title>
+    <link rel="stylesheet" href="docscedule.css">
+</head>
+<body>
+    <button class="menu-toggle">☰</button> <!-- Mobile Menu Button -->
+
+    <div class="container">
+        <div class="sidebar">
+            <ul class="nav-list">
+                <li>
+                    <a href="index.html">
+                        <img src="layout.png" class="icon">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="doctor.png" class="icon">
+                        <span>Doctor</span>
+                        <img class="dropdown" src="arrow.png">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="alldoctor.html">All Doctors</a></li>
+                        <li><a href="adddoctor.html">Add Doctor</a></li>
+                        <li><a href="appointment.html">Appointments</a></li>
+                        <li><a href="#">Doctor Profile</a></li>
+                        <li><a href="#">Doctor Schedule</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="patient.png" class="icon">
+                        <span>Patient</span>
+                        <img class="dropdown" src="arrow.png">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Patient List</a></li>
+                        <li><a href="#">Add Patient</a></li>
+                        <li><a href="#">Patient Profile</a></li>
+                        <li><a href="#">Patient Invoices</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="flask.png" class="icon">
+                        <span>Labs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="department.png" class="icon">
+                        <span>Department</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="accounts.png" class="icon">
+                        <span>Accounts</span>
+                        <img class="dropdown" src="arrow.png">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Transactions</a></li>
+                        <li><a href="#">Invoices</a></li>
+                        <li><a href="#">Payroll</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <button><img src="search.png" class="search-icon"></button>
+                </div>
+                <div class="profile">
+                    <img src="profile.png" alt="Profile" class="profile-img">
+                    <span>Md.Saikat Sikder</span>
+                    <!-- Dropdown Content -->
+                    <div class="profiledown">
+                        <button class="close-btn">&times;</button> <!-- Close Button -->
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+    <script src="docscedule.js"></script>
+</body>
+</html>
