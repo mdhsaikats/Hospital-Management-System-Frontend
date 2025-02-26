@@ -88,6 +88,42 @@
                     </div>
                 </div>
             </div>
+
+            <div class="schedule-container">
+                <button onclick="toggleScheduleForm()">Add Schedule</button>
+                <div class="form-wrapper" id="scheduleForm">
+                    <h4>Doctor Name</h4>
+                    <select id="doctorSelection">
+                        <option value="Dr. Smith">Dr. Smith</option>
+                        <option value="Dr. Johnson">Dr. Johnson</option>
+                        <option value="Dr. Williams">Dr. Williams</option>
+                    </select>
+                    <h4>Start Time</h4>
+                    <input type="time" id="startTime">
+                    <h4>End Time</h4>
+                    <input type="time" id="endTime">
+                    <button onclick="addDoctorSchedule()">Submit</button>
+                </div>
+                
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Doctor Name</th>
+                            <th>Availability</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scheduleList">
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
+                    
+                        
+                   
+               
             
             
             

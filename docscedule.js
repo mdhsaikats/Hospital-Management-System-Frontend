@@ -42,3 +42,41 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdown.classList.remove('show'); // Close the dropdown
     });
 });
+
+function toggleScheduleForm() {
+    const form = document.getElementById('scheduleForm');
+    form.style.display = form.style.display === 'block' ? 'none' : 'block';
+}
+
+function formatTime(time) {
+    let [hours, minutes] = time.split(":");
+    let suffix = hours >= 12 ? "PM" : "AM";
+    hours = ((hours % 12) || 12).toString();
+    return `${hours}:${minutes} ${suffix}`;
+}
+
+function addDoctorSchedule() {
+    const doctor = document.getElementById("doctorSelection").value;
+    const startTime = formatTime(document.getElementById("startTime").value);
+    const endTime = formatTime(document.getElementById("endTime").value);
+    const timePeriod = `${startTime} - ${endTime}`;
+    
+    const now = new Date();
+    let currentHours = now.getHours();
+    let currentMinutes = now.getMinutes();
+    let currentTime = formatTime(`${currentHours}:${currentMinutes}`);
+    
+    let status = 'Inactive';
+    if (currentTime >= startTime && currentTime < endTime) {
+        status = 'Active';
+    }
+    
+    const row = `<tr>
+        <td>${doctor}</td>
+        <td>${timePeriod}</td>
+        <td class="${status === 'Active' ? 'status-active' : 'status-inactive'}">${status}</td>
+    </tr>`;
+    
+    document.getElementById("scheduleList").innerHTML += row;
+    toggleScheduleForm();
+}

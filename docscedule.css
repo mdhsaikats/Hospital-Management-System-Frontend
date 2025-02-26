@@ -419,3 +419,84 @@ body {
     }
 }
 
+/* schedule */
+.schedule-container {
+    margin-top: 20px;
+    width: auto;
+
+    max-width: 1610px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.schedule-table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th, td {
+    padding: 12px;
+}
+th {
+    background-color: #4E8077;
+    color: white;
+}
+.form-wrapper {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+.form-wrapper input, .form-wrapper select, .form-wrapper button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.form-wrapper button {
+    background-color: #4E8077;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.form-wrapper button:hover {
+    background-color: #355852;
+}
+.status-active {
+    color: green;
+    font-weight: bold;
+}
+.status-inactive {
+    color: red;
+    font-weight: bold;
+}
+.schedule-container button {
+    background-color: #4E8077;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.schedule-container button:hover {
+    background-color: #355852;
+}
+
+.schedule-container h4{
+    margin-bottom: 5px;
+}
