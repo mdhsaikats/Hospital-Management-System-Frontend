@@ -82,8 +82,90 @@
                 </div>
             </div>
             
+            <div class="form-container">
+                <h2>Patients Basic Information</h2>
+                <form>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+        
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+        
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+        
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="admit-date">Admit Date</label>
+                    <input type="date" id="admit-date" name="admit-date" required>
+        
+                    <label for="admit-time">Admit Time</label>
+                    <input type="time" id="admit-time" name="admit-time" required>
+        
+                    <label>Gender</label>
+                    <div class="gender-options">
+                        <label><input type="radio" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" name="gender" value="female" required> Female</label>
+                    </div>
+        
+                    <label for="document">Files Document Upload</label>
+                    <input type="file" id="document" name="document">
+        
+                    <label for="note">Add Note</label>
+                    <textarea id="note" name="note" rows="4"></textarea>
+        
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+            <div class="box-alpha">
+                <h3>Registration Information</h3>
+                
+                <div class="group-beta">
+                    <label class="label-gamma" for="payment">Select Payment Option</label>
+                    <select class="select-theta" id="payment">
+                        <option>Payment Option</option>
+                    </select>
+                </div>
             
+                <div class="group-beta">
+                    <label class="label-gamma">Insurance Information</label>
+                    <div class="radio-zeta">
+                        <label><input type="radio" name="insurance" value="yes" checked> Yes, I have insurance</label>
+                        <label><input type="radio" name="insurance" value="no"> No, I don't have insurance</label>
+                    </div>
+                </div>
             
+                <div class="group-beta">
+                    <label class="label-gamma" for="insuranceNumber">Insurance Number</label>
+                    <input class="input-delta" type="text" id="insuranceNumber">
+                </div>
+            
+                <div class="group-beta">
+                    <label class="label-gamma" for="ward">Ward Number</label>
+                    <input class="input-delta" type="text" id="ward">
+                </div>
+            
+                <div class="group-beta">
+                    <label class="label-gamma" for="doctor">Select Doctor</label>
+                    <select class="select-epsilon" id="doctor">
+                        <option>Select Doctor</option>
+                    </select>
+                </div>
+            
+                <div class="group-beta">
+                    <label class="label-gamma" for="advance">Advance Amount</label>
+                    <input class="input-delta" type="text" id="advance">
+                </div>
+            
+                <button class="btn-omega">Submit</button>
+            </div>
+
+
+
+
+
+
             
         </div>
     </div>

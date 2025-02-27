@@ -419,3 +419,108 @@ body {
     }
 }
 
+.form-container {
+    margin-top: 20px;
+    width: auto;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.form-container label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+.form-container input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.submit-button {
+    background-color: #5a9;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+.submit-button:hover {
+    background-color: rgb(56, 120, 99);
+}
+
+
+
+.box-alpha {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: auto;
+}
+
+.box-alpha h3{
+    margin-bottom: 20px;
+}
+/* Styling for form sections */
+.group-beta {
+    margin-bottom: 15px;
+}
+
+/* Labels for form inputs */
+.label-gamma {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* General input field styling */
+.input-delta, .select-epsilon, .select-theta {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Custom styling for the payment dropdown */
+.select-theta {
+    height: 45px; /* Increased vertical size */
+}
+
+/* Radio button options styling */
+.radio-zeta {
+    display: flex;
+    gap: 15px;
+}
+
+/* Submit button styling */
+.btn-omega {
+    background-color: #5a9;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.btn-omega:hover {
+    background-color: rgb(56, 120, 99);
+}

@@ -421,8 +421,7 @@ body {
 
 .patient-table-wrapper {
     margin-top: 20px;
-    max-width: 1610px;
-
+    width: 100%;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
