@@ -419,3 +419,34 @@ body {
     }
 }
 
+.patient-table-wrapper {
+    margin-top: 20px;
+    max-width: 1610px;
+
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+.btn {
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.admit { background-color: blue; }
+.discharge { background-color: green; }
