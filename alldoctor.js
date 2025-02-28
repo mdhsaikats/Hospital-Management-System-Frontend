@@ -42,8 +42,3 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdown.classList.remove('show'); // Close the dropdown
     });
 });
-
-
-    
-    
-    

@@ -14,46 +14,12 @@ body {
     background-color: #f5f5f5;
 }
 
-
-
-.status-container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.status-title {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.status-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.status-card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.status-card h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.status-card p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
+.search-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: #333;
+    margin-top: 5px;
 }
 
 
@@ -140,14 +106,6 @@ body {
 }
 
 /* Search Bar */
-
-.search-icon {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    color: #333;
-    margin-top: 5px;
-}
 .search-bar {
     display: flex;
     align-items: center;
@@ -336,13 +294,6 @@ body {
     }
 }
 
-
-
-
-
-
-
-
 .dropdown-menu {
     list-style: none;
     margin-left: 30px;
@@ -446,10 +397,6 @@ body {
     display: none; /* Hide by default */
 }
 
-.menu-toggle:hover {
-    background: #3a6059;
-}
-
 /* Show menu button on mobile */
 @media screen and (max-width: 768px) {
     .menu-toggle {
@@ -471,3 +418,34 @@ body {
         left: 0;
     }
 }
+
+.patient-table-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+.btn {
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.admit { background-color: blue; }
+.discharge { background-color: green; }

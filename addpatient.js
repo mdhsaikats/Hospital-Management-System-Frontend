@@ -43,7 +43,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-    
-    
-    

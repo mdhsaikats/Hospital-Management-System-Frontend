@@ -27,8 +27,7 @@
                         <li><a href="alldoctor.html">All Doctors</a></li>
                         <li><a href="adddoctor.html">Add Doctor</a></li>
                         <li><a href="appointment.html">Appointments</a></li>
-                        <li><a href="#">Doctor Profile</a></li>
-                        <li><a href="#">Doctor Schedule</a></li>
+                        <li><a href="docscedule.html">Doctor Schedule</a></li>
                     </ul>
                 </li>
                 <li>
@@ -38,22 +37,16 @@
                         <img class="dropdown" src="arrow.png">
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Patient List</a></li>
-                        <li><a href="#">Add Patient</a></li>
-                        <li><a href="#">Patient Profile</a></li>
-                        <li><a href="#">Patient Invoices</a></li>
+                        <li><a href="patientlist.html">Patient List</a></li>
+                        <li><a href="addpatient.html">Add Patient</a></li>
+                        <li><a href="patientpayment.html">Patient Payment</a></li>
+                        <li><a href="roombook.html">Rooms</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="flask.png" class="icon">
-                        <span>Labs</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="department.png" class="icon">
-                        <span>Department</span>
+                    <a href="report.html">
+                        <img src="medical-advise.png" class="icon">
+                        <span>Reports</span>
                     </a>
                 </li>
                 <li>
@@ -63,9 +56,8 @@
                         <img class="dropdown" src="arrow.png">
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Transactions</a></li>
-                        <li><a href="#">Invoices</a></li>
-                        <li><a href="#">Payroll</a></li>
+                        <li><a href="transactions.html">Transactons</a></li>
+                        
                     </ul>
                 </li>
             </ul>
@@ -77,8 +69,15 @@
                     <button><img src="search.png" class="search-icon"></button>
                 </div>
                 <div class="profile">
-                    <img src="profile.png" alt="Profile">
+                    <img src="profile.png" alt="Profile" class="profile-img">
                     <span>Md.Saikat Sikder</span>
+                    <!-- Dropdown Content -->
+                    <div class="profiledown">
+                        <button class="close-btn">&times;</button> <!-- Close Button -->
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
                 </div>
             </div>
 <div class="doctor-list">
@@ -147,6 +146,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="alldoctor.js"></script>
 </body>
 </html>

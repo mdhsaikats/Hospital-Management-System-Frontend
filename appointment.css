@@ -14,7 +14,13 @@ body {
     background-color: #f5f5f5;
 }
 
-
+.search-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: #333;
+    margin-top: 5px;
+}
 
 
 /* Container Layout */
@@ -130,17 +136,162 @@ body {
     font-size: 16px;
 }
 
-/* Profile Section */
+/* Profile Container */
 .profile {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 20px;
 }
 
-.profile img {
+/* Smooth Hover Effect on Profile */
+.profile:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+    border-radius: 20px;
+}
+
+/* Profile Image */
+.profile-img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect on profile image */
+.profile-img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Dropdown Content */
+.profiledown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0; /* Align to the right for better mobile view */
+    background-color: #fff;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show dropdown smoothly */
+.profiledown.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown Links */
+.profiledown a {
+    padding: 12px 16px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Hover effect on dropdown links */
+.profiledown a:hover {
+    background-color: #4E8077;
+    color: #fff;
+    padding-left: 20px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect on close button */
+.close-btn:hover {
+    transform: rotate(90deg);
+    color: red;
+}
+
+/* Hover Effect for Profiledown (whole dropdown) */
+.profiledown:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- MOBILE RESPONSIVENESS ---- */
+@media (max-width: 768px) {
+    /* Reduce profile size */
+    .profile {
+        padding: 8px;
+    }
+
+    /* Adjust profile image */
+    .profile-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Dropdown adjustments */
+    .profiledown {
+        width: 160px;
+        right: -20px; /* Slightly shift it for better positioning */
+    }
+
+    .profiledown a {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+
+    /* Ensure close button is easier to tap */
+    .close-btn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust profile image */
+    .profile-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Make dropdown full-width */
+    .profiledown {
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
+
+    .profiledown a {
+        font-size: 12px;
+        padding: 10px;
+        text-align: center; /* Center-align for a better mobile look */
+    }
+
+    /* Close button adjustment */
+    .close-btn {
+        font-size: 16px;
+        top: 8px;
+        right: 8px;
+    }
 }
 
 .dropdown-menu {
@@ -268,3 +419,54 @@ body {
     }
 }
 
+.form-wrapper {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+h2 {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.option-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+.submit-btn {
+    background: #4E8077;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.submit-btn:hover {
+    background: #3a6059;
+}
+@media (max-width: 768px) {
+    .form-wrapper {
+        width: 100%;
+        padding: 15px;
+    }
+    .option-group {
+        flex-direction: column;
+    }
+}

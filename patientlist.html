@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devic-md.e-width, initial-scale=1.0">
+    <title>HMS</title>
+    <link rel="stylesheet" href="patientlist.css">
+</head>
+<body>
+    <button class="menu-toggle">☰</button> <!-- Mobile Menu Button -->
+
+    <div class="container">
+        <div class="sidebar">
+            <ul class="nav-list">
+                <li>
+                    <a href="index.html">
+                        <img src="layout.png" class="icon">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="doctor.png" class="icon">
+                        <span>Doctor</span>
+                        <img class="dropdown" src="arrow.png">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="alldoctor.html">All Doctors</a></li>
+                        <li><a href="adddoctor.html">Add Doctor</a></li>
+                        <li><a href="appointment.html">Appointments</a></li>
+                        <li><a href="docscedule.html">Doctor Schedule</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="patient.png" class="icon">
+                        <span>Patient</span>
+                        <img class="dropdown" src="arrow.png">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="patientlist.html">Patient List</a></li>
+                        <li><a href="addpatient.html">Add Patient</a></li>
+                        <li><a href="patientpayment.html">Patient Payment</a></li>
+                        <li><a href="roombook.html">Rooms</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="report.html">
+                        <img src="medical-advise.png" class="icon">
+                        <span>Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="accounts.png" class="icon">
+                        <span>Accounts</span>
+                        <img class="dropdown" src="arrow.png">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="transactions.html">Transactons</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <button><img src="search.png" class="search-icon"></button>
+                </div>
+                <div class="profile">
+                    <img src="profile.png" alt="Profile" class="profile-img">
+                    <span>Md.Saikat Sikder</span>
+                    <!-- Dropdown Content -->
+                    <div class="profiledown">
+                        <button class="close-btn">&times;</button> <!-- Close Button -->
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="patient-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Patients</th>
+                            <th>Age</th>
+                            <th>Address</th>
+                            <th>Admitted</th>
+                            <th>Discharge</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0001</td>
+                            <td>Molly</td>
+                            <td>45</td>
+                            <td>70 Bowman St. South Windsor, CT 06074</td>
+                            <td>May 13, 2021</td>
+                            <td>May 16, 2021</td>
+                            <td><button class="btn admit">Admit</button></td>
+                        </tr>
+                        <tr>
+                            <td>PT-0011</td>
+                            <td>Brian</td>
+                            <td>35</td>
+                            <td>123 6th St. Melbourne, FL 32904</td>
+                            <td>May 13, 2021</td>
+                            <td>May 22, 2021</td>
+                            <td><button class="btn discharge">Discharge</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+    <script src="patientlist.js"></script>
+</body>
+</html>

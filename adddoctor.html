@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=devic-md.e-width, initial-scale=1.0">
     <title>HMS</title>
-    <link rel="stylesheet" href="alldoctor.css">
+    <link rel="stylesheet" href="adddoctor.css">
 </head>
 <body>
     <button class="menu-toggle">☰</button> <!-- Mobile Menu Button -->
@@ -28,8 +28,7 @@
                         <li><a href="alldoctor.html">All Doctors</a></li>
                         <li><a href="adddoctor.html">Add Doctor</a></li>
                         <li><a href="appointment.html">Appointments</a></li>
-                        <li><a href="#">Doctor Profile</a></li>
-                        <li><a href="#">Doctor Schedule</a></li>
+                        <li><a href="docscedule.html">Doctor Schedule</a></li>
                     </ul>
                 </li>
                 <li>
@@ -39,22 +38,16 @@
                         <img class="dropdown" src="arrow.png">
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Patient List</a></li>
-                        <li><a href="#">Add Patient</a></li>
-                        <li><a href="#">Patient Profile</a></li>
-                        <li><a href="#">Patient Invoices</a></li>
+                        <li><a href="patientlist.html">Patient List</a></li>
+                        <li><a href="addpatient.html">Add Patient</a></li>
+                        <li><a href="patientpayment.html">Patient Payment</a></li>
+                        <li><a href="roombook.html">Rooms</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="flask.png" class="icon">
-                        <span>Labs</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="department.png" class="icon">
-                        <span>Department</span>
+                    <a href="report.html">
+                        <img src="medical-advise.png" class="icon">
+                        <span>Reports</span>
                     </a>
                 </li>
                 <li>
@@ -64,9 +57,8 @@
                         <img class="dropdown" src="arrow.png">
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Transactions</a></li>
-                        <li><a href="#">Invoices</a></li>
-                        <li><a href="#">Payroll</a></li>
+                        <li><a href="transactions.html">Transactons</a></li>
+                        
                     </ul>
                 </li>
             </ul>
@@ -76,20 +68,169 @@
             <div class="header">
                 <div class="search-bar">
                     <input type="text" placeholder="Search">
-                    <button>🔍</button>
+                    <button><img src="search.png" class="search-icon"></button>
                 </div>
                 <div class="profile">
-                    <img src="profile.png" alt="Profile">
+                    <img src="profile.png" alt="Profile" class="profile-img">
                     <span>Md.Saikat Sikder</span>
+                    <!-- Dropdown Content -->
+                    <div class="profiledown">
+                        <button class="close-btn">&times;</button> <!-- Close Button -->
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
                 </div>
+            </div>  
+
+            <div class="form1container">
+                <h2>Doctor Basic Information</h2>
+                <form>
+                    <div class="row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Enter first name">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Enter last name">
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="Enter phone number">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter email">
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="form-group">
+                            <label>Join Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>Join Time</label>
+                            <input type="time">
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="form-group">
+                            <label>Document Upload</label>
+                            <input type="file">
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <div class="gender-group">
+                                <input type="radio" id="male" name="gender" checked>
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label>Add Note</label>
+                        <textarea rows="4" placeholder="Enter any notes..."></textarea>
+                    </div>
+        
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
             </div>
-            
-            
-            
-            
+
+
+            <div class="info-container">
+                <h2>Personal Information</h2>
+                <form>
+                    <div class="info-row">
+                        <div class="input-wrapper">
+                            <label>Doctor Payment Option</label>
+                            <select>
+                                <option>Select Payment Option</option>
+                                <option>Hourly</option>
+                                <option>Fixed Salary</option>
+                                <option>Commission-Based</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper">
+                            <label>Cabin Number</label>
+                            <input type="text" placeholder="Enter cabin number">
+                        </div>
+                    </div>
+        
+                    <div class="info-row">
+                        <div class="input-wrapper">
+                            <label>Specialty</label>
+                            <input type="text" placeholder="Enter specialty">
+                        </div>
+                        <div class="input-wrapper">
+                            <label>I-Health Virtual Call Attend?</label>
+                            <div class="radio-wrapper">
+                                <input type="radio" id="attend-yes" name="virtual_call" checked>
+                                <label for="attend-yes">Yes</label>
+                                <input type="radio" id="attend-no" name="virtual_call">
+                                <label for="attend-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="input-wrapper">
+                        <label>Social Links</label>
+                        <div class="social-inputs">
+                            <input type="text" placeholder="Facebook Link">
+                            <input type="text" placeholder="Instagram Link">
+                            <input type="text" placeholder="LinkedIn Link">
+                        </div>
+                    </div>
+        
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+
+            <div class="auth-container">
+                <h2>Authentication Information</h2>
+                <form>
+                    <div class="auth-row">
+                        <div class="input-box">
+                            <label>User Name</label>
+                            <input type="text" placeholder="Enter username">
+                        </div>
+                        <div class="input-box">
+                            <label>Password</label>
+                            <input type="password" placeholder="Enter password">
+                        </div>
+                    </div>
+        
+                    <div class="auth-row">
+                        <div class="input-box">
+                            <label>Confirm Password</label>
+                            <input type="password" placeholder="Confirm password">
+                        </div>
+                        <div class="input-box">
+                            <label>Login Permission</label>
+                            <div class="radio-group">
+                                <input type="radio" id="hospital" name="login_permission" checked>
+                                <label for="hospital">Hospital Only</label>
+                                <input type="radio" id="anywhere" name="login_permission">
+                                <label for="anywhere">Anywhere</label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <button type="submit" class="submit2-btn">Submit</button>
+                </form>
+            </div>
+          <br>
+
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="adddoctor.js"></script>
 </body>
 </html>
