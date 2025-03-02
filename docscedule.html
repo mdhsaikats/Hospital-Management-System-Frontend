@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=devic-md.e-width, initial-scale=1.0">
     <title>HMS</title>
-    <link rel="stylesheet" href="docscedule.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <button class="menu-toggle">☰</button> <!-- Mobile Menu Button -->
@@ -83,23 +83,23 @@
                 </div>
             </div>
 
-            <div class="schedule-container">
-                <button onclick="toggleScheduleForm()">Add Schedule</button>
-                <div class="form-wrapper" id="scheduleForm">
+            <div class="appointment-container">
+                <button onclick="toggleAppointmentForm()">Add Appointment</button>
+                <div class="form-container" id="appointmentForm">
                     <h4>Doctor Name</h4>
-                    <select id="doctorSelection">
+                    <select id="doctorDropdown">
                         <option value="Dr. Smith">Dr. Smith</option>
                         <option value="Dr. Johnson">Dr. Johnson</option>
                         <option value="Dr. Williams">Dr. Williams</option>
                     </select>
                     <h4>Start Time</h4>
-                    <input type="time" id="startTime">
+                    <input type="time" id="appointmentStartTime">
                     <h4>End Time</h4>
-                    <input type="time" id="endTime">
-                    <button onclick="addDoctorSchedule()">Submit</button>
+                    <input type="time" id="appointmentEndTime">
+                    <button onclick="addDoctorAppointment()">Submit</button>
                 </div>
-                
-                <table class="schedule-table">
+            
+                <table class="appointment-table">
                     <thead>
                         <tr>
                             <th>Doctor Name</th>
@@ -107,10 +107,11 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody id="scheduleList">
+                    <tbody id="appointmentList">
                     </tbody>
                 </table>
             </div>
+            
 
             
             
