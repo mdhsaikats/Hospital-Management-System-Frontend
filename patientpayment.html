@@ -82,6 +82,62 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="payment-container">
+                <h2>Patient Payment</h2>
+        
+                <div class="form-group">
+                    <label for="patientName">Patient Name:</label>
+                    <select id="patientName">
+                        <option value="Saikat">Saikat</option>
+                        <option value="Ashik">Ashik</option>
+                        <option value="Miraj Boss">Miraj Boss</option>
+                        <option value="Minhaj">Minhaj</option>
+                        <option value="Arik">Arik</option>
+                    </select>
+                </div>
+        
+                <div class="form-group">
+                    <label for="billAmount">Bill Amount (Tk):</label>
+                    <input type="number" id="billAmount" placeholder="Enter amount">
+                </div>
+        
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method:</label>
+                    <select id="paymentMethod">
+                        <option value="Cash">Cash</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Bkash">Bkash</option>
+                        <option value="Nagod">Nagod</option>
+                        <option value="Visa/Mastercard">Visa/Mastercard</option>
+                        <option value="DevidCard">Devid Card</option>
+                        <option value="Insurance">Insurance</option>
+                    </select>
+                </div>
+        
+                <button onclick="addPayment()">Submit Payment</button>
+        
+                <table class="payment-table">
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Amount ($)</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="paymentList">
+                        <!-- Payment history will be added here -->
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+
+
             
             
             

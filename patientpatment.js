@@ -42,3 +42,30 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdown.classList.remove('show'); // Close the dropdown
     });
 });
+
+
+/*payment block js*/
+
+function addPayment() {
+    const patient = document.getElementById("patientName").value;
+    const amount = document.getElementById("billAmount").value;
+    const method = document.getElementById("paymentMethod").value;
+
+    if (!amount || amount <= 0) {
+        alert("Please enter a valid bill amount.");
+        return;
+    }
+
+    const row = `<tr>
+        <td>${patient}</td>
+        <td>$${amount}</td>
+        <td>${method}</td>
+        <td class="status-paid">Paid</td>
+    </tr>`;
+
+    document.getElementById("paymentList").insertAdjacentHTML('beforeend', row);
+    alert("Payment recorded successfully!");
+
+    // Clear input fields after submission
+    document.getElementById("billAmount").value = "";
+}
