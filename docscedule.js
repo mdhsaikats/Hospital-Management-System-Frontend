@@ -43,40 +43,61 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function toggleScheduleForm() {
-    const form = document.getElementById('scheduleForm');
+function toggleAppointmentForm() {
+    const form = document.getElementById('appointmentForm');
     form.style.display = form.style.display === 'block' ? 'none' : 'block';
 }
 
-function formatTime(time) {
-    let [hours, minutes] = time.split(":");
-    let suffix = hours >= 12 ? "PM" : "AM";
-    hours = ((hours % 12) || 12).toString();
-    return `${hours}:${minutes} ${suffix}`;
+// Convert HH:MM to 24-hour format for comparison
+function getTimeObject(time) {
+    let [hours, minutes] = time.split(":").map(Number);
+    return new Date(1970, 0, 1, hours, minutes); // Use a fixed date
 }
 
-function addDoctorSchedule() {
-    const doctor = document.getElementById("doctorSelection").value;
-    const startTime = formatTime(document.getElementById("startTime").value);
-    const endTime = formatTime(document.getElementById("endTime").value);
-    const timePeriod = `${startTime} - ${endTime}`;
+// Convert HH:MM to AM/PM format for display
+function formatTimeDisplay(time) {
+    let [hours, minutes] = time.split(":").map(Number);
+    let suffix = hours >= 12 ? "PM" : "AM";
+    hours = ((hours % 12) || 12).toString();
+    return `${hours}:${minutes.toString().padStart(2, '0')} ${suffix}`;
+}
+
+function addDoctorAppointment() {
+    const doctor = document.getElementById("doctorDropdown").value;
+    const startTimeRaw = document.getElementById("appointmentStartTime").value;
+    const endTimeRaw = document.getElementById("appointmentEndTime").value;
     
-    const now = new Date();
-    let currentHours = now.getHours();
-    let currentMinutes = now.getMinutes();
-    let currentTime = formatTime(`${currentHours}:${currentMinutes}`);
-    
-    let status = 'Inactive';
-    if (currentTime >= startTime && currentTime < endTime) {
-        status = 'Active';
+    if (!startTimeRaw || !endTimeRaw) {
+        alert("Please select start and end times.");
+        return;
     }
+
+    // Convert to display format
+    const startTimeDisplay = formatTimeDisplay(startTimeRaw);
+    const endTimeDisplay = formatTimeDisplay(endTimeRaw);
+    const timePeriod = `${startTimeDisplay} - ${endTimeDisplay}`;
     
+    // Get current time
+    const now = new Date();
+    const currentTime = new Date(1970, 0, 1, now.getHours(), now.getMinutes()); // Fixed date for comparison
+    
+    // Convert start and end times to objects
+    const startTime = getTimeObject(startTimeRaw);
+    const endTime = getTimeObject(endTimeRaw);
+    
+    // Determine status based on time comparison
+    let status = currentTime >= startTime && currentTime < endTime ? 'Active' : 'Inactive';
+
+    // Create the table row
     const row = `<tr>
         <td>${doctor}</td>
         <td>${timePeriod}</td>
         <td class="${status === 'Active' ? 'status-active' : 'status-inactive'}">${status}</td>
     </tr>`;
     
-    document.getElementById("scheduleList").innerHTML += row;
-    toggleScheduleForm();
+    // Append the row correctly
+    document.getElementById("appointmentList").insertAdjacentHTML('beforeend', row);
+    
+    // Toggle form visibility
+    toggleAppointmentForm();
 }
