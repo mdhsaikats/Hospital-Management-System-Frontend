@@ -86,7 +86,102 @@
             
 
             <!-- Work here and only work under a container by using the reference website i gave you -->
-
+            <div class="booking-container">
+                <h2>Room Booking Form</h2>
+                <form action="#" method="POST" class="booking-form">
+                    <!-- Patient's Name -->
+                    <label for="patient-name">Patient's Name:</label>
+                    <input type="text" id="patient-name" name="patient-name" placeholder="Enter patient's name" required>
+                    
+                    <!-- Patient's Age -->
+                    <label for="patient-age">Patient's Age:</label>
+                    <input type="text" id="patient-age" name="patient-age" placeholder="Enter patient's age" required>
+                    
+                    <!-- Booking Date -->
+                    <label for="booking-date">Booking Date (dd/mm/yy):</label>
+                    <input type="text" id="booking-date" name="booking-date" placeholder="Enter booking date" required>
+                    
+                    <!-- Room Selection -->
+                    <label for="room-selection">Select Room:</label>
+                    <div class="room-selection">
+                        <!-- Room 101 -->
+                        <label class="room-box">
+                            <input type="radio" name="room" class="room-input" />
+                            <div class="room available">
+                                <p>Room 101</p>
+                                <span>Available</span>
+                            </div>
+                        </label>
+                        
+                        <!-- Room 102 (Occupied) -->
+                        <label class="room-box">
+                            <input type="radio" name="room" class="room-input" />
+                            <div class="room occupied">
+                                <p>Room 102</p>
+                                <span>Occupied</span>
+                            </div>
+                        </label>
+                        
+                        <!-- Room 103 -->
+                        <label class="room-box">
+                            <input type="radio" name="room" class="room-input" />
+                            <div class="room available">
+                                <p>Room 103</p>
+                                <span>Available</span>
+                            </div>
+                        </label>
+                        
+                        <!-- Room 104 (Occupied) -->
+                        <label class="room-box">
+                            <input type="radio" name="room" class="room-input" />
+                            <div class="room occupied">
+                                <p>Room 104</p>
+                                <span>Occupied</span>
+                            </div>
+                        </label>
+                        
+                        <!-- Room 105 -->
+                        <label class="room-box">
+                            <input type="radio" name="room" class="room-input" />
+                            <div class="room available">
+                                <p>Room 105</p>
+                                <span>Available</span>
+                            </div>
+                        </label>
+                        
+                        <!-- Room 106 (Occupied) -->
+                        <label class="room-box">
+                            <input type="radio" name="room" class="room-input" />
+                            <div class="room occupied">
+                                <p>Room 106</p>
+                                <span>Occupied</span>
+                            </div>
+                        </label>
+                        
+                        <!-- Room 107 -->
+                        <label class="room-box">
+                            <input type="radio" name="room" class="room-input" />
+                            <div class="room available">
+                                <p>Room 107</p>
+                                <span>Available</span>
+                            </div>
+                        </label>
+                        
+                        <!-- Room 108 (Occupied) -->
+                        <label class="room-box">
+                            <input type="radio" name="room" class="room-input" />
+                            <div class="room occupied">
+                                <p>Room 108</p>
+                                <span>Occupied</span>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit">Book Room</button>
+                </form>
+            </div>
+        
 
 
 
