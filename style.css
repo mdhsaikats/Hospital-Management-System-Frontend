@@ -164,12 +164,14 @@ body {
 }
 
 .search-bar input {
+    margin-top:0px;
     border: none;
     background: none;
     outline: none;
     padding: 5px;
     flex: 1;
 }
+
 
 .search-bar button {
     background: none;
@@ -566,7 +568,7 @@ body {
     width: 100%;
 }
 
-h2 {
+.form1container h2 {
     margin-bottom: 15px;
 }
 
