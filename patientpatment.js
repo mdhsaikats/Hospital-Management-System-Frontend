@@ -58,7 +58,7 @@ function addPayment() {
 
     const row = `<tr>
         <td>${patient}</td>
-        <td>$${amount}</td>
+        <td>${amount} Tk</td>
         <td>${method}</td>
         <td class="status-paid">Paid</td>
     </tr>`;
