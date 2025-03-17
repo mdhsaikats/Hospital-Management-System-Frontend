@@ -418,3 +418,37 @@ body {
         left: 0;
     }
 }
+
+/*Transaction History Block*/
+
+.transaction-box {
+    width: auto;
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.transaction-box h2 {
+    text-align: center;
+    color: #333;
+}
+.transaction-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.transaction-box th, 
+.transaction-box td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+.transaction-box th {
+    background-color: #2F6B56;
+    color: white;
+    font-weight: bold;
+}
+.transaction-box tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
