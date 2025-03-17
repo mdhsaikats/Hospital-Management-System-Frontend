@@ -941,7 +941,7 @@ th {
     text-align: left;
 }
 .tablehead th {
-    background-color: #f4f4f4;
+    background-color: #2F6B56;
     cursor: pointer;
 }
 .btn {
@@ -951,8 +951,8 @@ th {
     border-radius: 5px;
     cursor: pointer;
 }
-.admit { background-color: blue; }
-.discharge { background-color: green; }
+.admit { background-color: #3498db; }
+.discharge { background-color: #d35400; }
 
 /*Add patient*/
 
