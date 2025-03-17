@@ -112,13 +112,10 @@
                     <div class="row">
                         <div class="form-group">
                             <label>Join Date</label>
-                            <input type="date">
-                        </div>
-                        <div class="form-group">
-                            <label>Join Time</label>
-                            <input type="time">
-                        </div>
+                            <input type="date" onclick="this.showPicker()" style="cursor: pointer; width: 100%;">
+                        </div>  
                     </div>
+                    
         
                     <div class="row">
                         <div class="form-group">
@@ -170,15 +167,7 @@
                             <label>Specialty</label>
                             <input type="text" placeholder="Enter specialty">
                         </div>
-                        <div class="input-wrapper">
-                            <label>I-Health Virtual Call Attend?</label>
-                            <div class="radio-wrapper">
-                                <input type="radio" id="attend-yes" name="virtual_call" checked>
-                                <label for="attend-yes">Yes</label>
-                                <input type="radio" id="attend-no" name="virtual_call">
-                                <label for="attend-no">No</label>
-                            </div>
-                        </div>
+                        
                     </div>
         
                     <div class="input-wrapper">
@@ -194,39 +183,7 @@
                 </form>
             </div>
 
-            <div class="auth-container">
-                <h2>Authentication Information</h2>
-                <form>
-                    <div class="auth-row">
-                        <div class="input-box">
-                            <label>User Name</label>
-                            <input type="text" placeholder="Enter username">
-                        </div>
-                        <div class="input-box">
-                            <label>Password</label>
-                            <input type="password" placeholder="Enter password">
-                        </div>
-                    </div>
-        
-                    <div class="auth-row">
-                        <div class="input-box">
-                            <label>Confirm Password</label>
-                            <input type="password" placeholder="Confirm password">
-                        </div>
-                        <div class="input-box">
-                            <label>Login Permission</label>
-                            <div class="radio-group">
-                                <input type="radio" id="hospital" name="login_permission" checked>
-                                <label for="hospital">Hospital Only</label>
-                                <input type="radio" id="anywhere" name="login_permission">
-                                <label for="anywhere">Anywhere</label>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <button type="submit" class="submit2-btn">Submit</button>
-                </form>
-            </div>
+            
           <br>
 
         </div>

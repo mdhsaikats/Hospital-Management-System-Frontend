@@ -483,7 +483,7 @@ body {
 .settings-page form input[type="email"]:focus,
 .settings-page form input[type="password"]:focus,
 .settings-page form select:focus {
-    border-color: #4CAF50;
+    border-color: #000000;
     outline: none;
 }
 

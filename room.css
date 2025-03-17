@@ -502,7 +502,7 @@ body {
 
 /* Room availability styles */
 .available {
-    background-color: #A5D6A7;
+    background-color: rgb(108, 230, 189);
 }
 
 .occupied {
@@ -518,14 +518,14 @@ body {
 }
 
 .room-input:checked + .room {
-    background-color: #66BB6A;
+    background-color: rgb(56, 120, 99);
     color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Button styling */
 .booking-container button {
-    background-color: #4CAF50;
+    background-color: rgb(56, 120, 99);
     color: white;
     font-size: 18px;
     padding: 12px;
@@ -536,9 +536,9 @@ body {
 }
 
 .booking-container button:hover {
-    background-color: #45a049;
+    background-color: rgb(56, 120, 99);
 }
 
 .booking-container button:active {
-    background-color: #388E3C;
+    background-color: rgb(56, 120, 99);
 }
