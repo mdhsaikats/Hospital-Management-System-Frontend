@@ -523,7 +523,10 @@ body {
 .doctor-card p {
     color: #555;
 }
-
+.doctor-card a{
+    text-decoration: none;
+    color: white;
+}
 .doctor-card button {
     margin-top: 10px;
     background: #4E8077;
