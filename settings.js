@@ -42,3 +42,67 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdown.classList.remove('show'); // Close the dropdown
     });
 });
+
+/*For the dropdown*/
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownContent");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("dropdownContent");
+    var button = document.querySelector(".user-dropdown button");
+    if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.style.display = "none";
+    }
+});
+
+function addUser(event) {
+    event.preventDefault();
+    var fullName = document.getElementById("fullName").value;
+    var idNumber = document.getElementById("idNumber").value;
+    var designation = document.getElementById("designation").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var address = document.getElementById("address").value;
+    var dob = document.getElementById("dob").value;
+    var joiningDate = document.getElementById("joiningDate").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    
+    if (!fullName || !idNumber || !designation || !email || !phone || !address || !dob || !joiningDate || !password || !confirmPassword) {
+        alert("Please fill out all fields.");
+        return;
+    }
+    
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+    }
+    
+    alert("User " + fullName + " added successfully!");
+    document.getElementById("dropdownContent").style.display = "none";
+}
+
+/*For permission Part*/
+
+function togglePermissionsDropdown() {
+    var dropdown = document.getElementById("permissionsDropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+document.addEventListener("click", function(event) {
+    var permissionsDropdown = document.getElementById("permissionsDropdown");
+    var permissionsButton = document.querySelector(".permissions-dropdown button");
+    
+    if (!permissionsButton.contains(event.target) && !permissionsDropdown.contains(event.target)) {
+        permissionsDropdown.style.display = "none";
+    }
+});
+
+function savePermissions(event) {
+    event.preventDefault();
+    var role = document.getElementById("userRole").value;
+    alert("Permissions updated for role: " + role);
+    document.getElementById("permissionsDropdown").style.display = "none";
+}

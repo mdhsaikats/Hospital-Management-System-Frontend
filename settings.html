@@ -91,16 +91,39 @@
                 <!-- User Management Section -->
                 <div class="settings-section">
                     <h3>User Management</h3>
-                    <button>Add New User</button>
-                    <button>Manage Permissions</button>
+                    <div class="user-dropdown">
+                        <button onclick="toggleDropdown()">Add New User</button>
+                        <div class="user-dropdown-content" id="dropdownContent">
+                            <input type="text" id="fullName" placeholder="Full Name">
+                            <input type="text" id="idNumber" placeholder="ID Number">
+                            <input type="text" id="designation" placeholder="Designation">
+                            <input type="email" id="email" placeholder="Email">
+                            <input type="tel" id="phone" placeholder="Phone Number">
+                            <input type="text" id="address" placeholder="Address">
+                            <h5>Date Of Birth</h5>
+                            <input type="date" id="dob" placeholder="Date of Birth">
+                            <h5>Joining Date</h5>
+                            <input type="date" id="joiningDate" placeholder="Joining Date">
+                            <input type="password" id="password" placeholder="Password">
+                            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                            <button onclick="addUser()">Submit</button>
+                        </div>
+                    </div>
+                    <div class="permissions-dropdown">
+                        <button onclick="togglePermissionsDropdown()">Manage Permissions</button>
+                        <div class="permissions-dropdown-content" id="permissionsDropdown">
+                            <label for="userRole">Select Role:</label>
+                            <select id="userRole">
+                                <option value="admin">Admin</option>
+                                <option value="editor">Editor</option>
+                                <option value="viewer">Viewer</option>
+                            </select>
+                            <button onclick="savePermissions(event)">Save Permissions</button>
+                        </div>
+                    </div>
                 </div>
             
-                <!-- System Configuration Section -->
-                <div class="settings-section">
-                    <h3>System Configuration</h3>
-                    <button>Change Time Format</button>
-                    <button>Set Backup Schedule</button>
-                </div>
+               
             
                 <!-- Security Settings Section -->
                 <div class="settings-section">
