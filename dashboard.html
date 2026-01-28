@@ -2,150 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMS</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="refresh" content="0; url=pages/dashboard.html">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .redirect-message {
+            text-align: center;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <ul class="nav-list">
-                <li>
-                    <a href="dashboard.html">
-                        <img src="asset/dashboard.png" class="icon">
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="asset/doctor.png" class="icon">
-                        <span>Doctor</span>
-                        <img class="dropdown" src="asset/down-arrow.png">
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="alldoctor.html"><img src="asset/medical-team.png" class="icon">All Doctors</a></li>
-                        <li><a href="adddoctor.html"><img src="asset/adddoc.png" class="icon">Add Doctor</a></li>
-                        <li><a href="appointment.html"><img src="asset/aptdoc.png" class="icon">Doctor Appointments</a></li>
-                        <li><a href="docscedule.html"><img src="asset/schedule.png" class="icon">Doctor Schedule</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="asset/patient.png" class="icon">
-                        <span>Patient</span>
-                        <img class="dropdown" src="asset/down-arrow.png">
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="patientlist.html"><img src="asset/patientlist.png" class="icon">Patient List</a></li>
-                        <li><a href="addpatient.html"><img src="asset/addpatient.png" class="icon">Add Patient</a></li>
-                        <li><a href="patientpayment.html"><img src="asset/patientpayment.png" class="icon">Patient Payment</a></li>
-                        <li><a href="roombook.html"><img src="asset/room-available.png" class="icon">Rooms</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="report.html">
-                        <img src="asset/medical-report.png" class="icon">
-                        <span>Reports</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="asset/accounts.png" class="icon">
-                        <span>Accounts</span>
-                        <img class="dropdown" src="asset/down-arrow.png">
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="transactions.html"><img src="asset/transaction.png" class="icon">Transactons</a></li>
-                        
-                    </ul>
-                </li>
-               
-            </ul>
-        </div>
-        
-        <div class="main-content">
-            <div class="header">
-                <button class="menu-toggle">☰</button> <!-- Mobile Menu Button -->
-                <div class="search-bar">
-                    <input type="text" placeholder="Search">
-                    <button><img src="search.png" class="search-icon"></button>
-                </div>
-                <div class="profile">
-                    <img src="asset/profile.png" alt="Profile" class="profile-img">
-                    <span>Md.Saikat Sikder</span>
-                    <!-- Dropdown Content -->
-                    <div class="profiledown">
-                        <button class="close-btn">&times;</button> <!-- Close Button -->
-                        <a href="profile.html">Profile</a>
-                        <a href="settings.html">Settings</a>
-                        <a href="index.html">Logout</a>
-                    </div>
-                </div>
-                
-                
-            
-            </div>
-            
-            <!-- Hospitality Status Block inside main-content -->
-            <div class="status-container">
-                <div class="status-title">Hospitality Status</div>
-                <div class="status-grid">
-                    <div class="status-card">
-                        <img src="asset/appointment.png">
-                        <h3>Total Appointment</h3>
-                        <p>400</p>
-                    </div>
-                    <div class="status-card">
-                        <img src="asset/patient.png">
-                        <h3>Total Patients</h3>
-                        <p>117</p>
-                    </div>
-                    
-                    <div class="status-card">
-                        <img src="asset/doctor.png">
-                        <h3>Total Doctor</h3>
-                        <p>200</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Room Status Block -->
-            <div class="status-container">
-                <div class="status-title">Room Status</div>
-                <div class="status-grid">
-                    <div class="status-card">
-                        <img src="asset/hotel.png">
-                        <h3>Total Rooms</h3>
-                        <p>150</p>
-                    </div>
-                    <div class="status-card">
-                        <img src="asset/occupied.png">
-                        <h3>Occupied Rooms</h3>
-                        <p>75</p>
-                    </div>
-                    <div class="status-card">
-                        <img src="asset/room-available.png">
-                        <h3>Available Rooms</h3>
-                        <p>75</p>
-                    </div>
-                    <div class="status-card">
-                        <img src="asset/intensive-care-unit.png">
-                        <h3>ICU Beds</h3>
-                        <p>20</p>
-                    </div>
-                    <div class="status-card">
-                        <img src="asset/emergency.png">
-                        <h3>Emergency Rooms</h3>
-                        <p>10</p>
-                    </div>
-                    <div class="status-card">
-                        <img alt="error to lode image" src="asset/isolation.png">
-                        <h3>Isolation Wards</h3>
-                        <p>15</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="redirect-message">
+        <h2>Redirecting to Dashboard...</h2>
+        <div class="spinner"></div>
+        <p>If not redirected, <a href="pages/dashboard.html" style="color: #fff; text-decoration: underline;">click here</a></p>
     </div>
-    <script src="script.js"></script>
+    <script>
+        // Fallback redirect
+        setTimeout(function() {
+            window.location.href = "pages/dashboard.html";
+        }, 100);
+    </script>
 </body>
 </html>

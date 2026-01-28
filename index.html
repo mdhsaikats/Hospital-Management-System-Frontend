@@ -1,26 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management System - Login</title>
-    <link rel="stylesheet" href="landing.css"> <!-- Link to the external CSS file -->
+    <title>HospitalOS | Secure Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            200: '#a5f3fc',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
 </head>
+<body class="min-h-screen bg-slate-950 text-slate-50 font-display">
+    <div class="min-h-screen grid lg:grid-cols-2">
+        <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
+            <div class="absolute inset-0 opacity-40" aria-hidden="true">
+                <div class="absolute -left-16 top-10 h-72 w-72 rounded-full bg-brand-500 blur-3xl"></div>
+                <div class="absolute right-0 bottom-10 h-64 w-64 rounded-full bg-sky-500 blur-3xl"></div>
+            </div>
+            <div class="relative px-10 py-12 lg:px-16 lg:py-16 flex flex-col gap-10">
+                <div class="flex items-center gap-3">
+                    <div class="h-12 w-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center text-lg font-semibold text-brand-100">H</div>
+                    <div>
+                        <p class="text-sm text-slate-300">HospitalOS</p>
+                        <p class="text-xl font-semibold text-white">Clinical Command Console</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm text-brand-100">Trusted, secure, always on</p>
+                    <h1 class="text-3xl lg:text-4xl font-semibold leading-tight text-white">Coordinated care without the clutter.</h1>
+                    <p class="text-lg text-slate-200 max-w-xl">Track beds, appointments, and finances from a single pane of glass built for fast, decisive hospital teams.</p>
+                </div>
+                <ul class="space-y-3 text-sm text-slate-200">
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand-200"></span>
+                        <span>Real-time occupancy and bed visibility</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand-200"></span>
+                        <span>Faster admit-to-discharge workflows</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand-200"></span>
+                        <span>Secure access for your clinical teams</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-<body>
+        <section class="flex items-center bg-white text-slate-900">
+            <div class="w-full px-8 py-12 sm:px-12 lg:px-16">
+                <p class="text-sm font-semibold text-brand-600 mb-2">Welcome back</p>
+                <h2 class="text-2xl font-semibold text-slate-900">Access the HospitalOS console</h2>
+                <p class="text-sm text-slate-500 mt-1">Use your administrator credentials to continue.</p>
 
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="dashboard.html" method="post">
-            <input type="text" name="username" placeholder="Username" class="input-field" required>
-            <input type="password" name="password" placeholder="Password" class="input-field" required>
-            <button type="submit" class="login-btn">Login</button>
-        </form>
-        <a href="#" class="forgot-password">Forgot Password?</a>
+                <form class="mt-8 space-y-4" action="pages/dashboard.html" method="post">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-slate-700" for="username">Username</label>
+                        <input class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200" type="text" name="username" id="username" placeholder="Enter your username" required>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-slate-700" for="password">Password</label>
+                        <input class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200" type="password" name="password" id="password" placeholder="Enter your password" required>
+                    </div>
+
+                    <button type="submit" class="w-full rounded-xl bg-brand-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/20 transition hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-200">Access Console</button>
+                </form>
+
+                <div class="mt-6 flex items-center justify-between text-sm text-slate-500">
+                    <a class="hover:text-brand-600" href="#">Forgot password?</a>
+                    <span>Secure login • Admin only</span>
+                </div>
+            </div>
+        </section>
     </div>
-    <script src="landing.js"></script>
-
+    <script src="js/landing.js"></script>
 </body>
-
 </html>
